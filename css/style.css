@@ -23,6 +23,7 @@ body{
     width: 1216px;
     margin: 0 auto;
     position: relative;
+    z-index: 2;
 }
 h1,h2,h3,h4,h5,h6{
     margin: 0;
@@ -36,7 +37,8 @@ header{
     height: 960px;
     color: white;
     margin-top: -20px;
-    z-index: -1;
+    z-index: 1;
+    position: relative;
 }
 .blue_bg{
     background: #2A6CEA;
@@ -44,6 +46,7 @@ header{
     width: 100%;
     height: 100%;
     z-index: 0;
+    position: absolute;
 }
 
 nav{
@@ -52,6 +55,7 @@ nav{
 a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .logo{
     font-size: 20px;
@@ -64,10 +68,12 @@ a{
     left: 0px;
     position: relative;
 }
+
 .logo .cur{
     border-radius: 30px;
     height: 24px;
-    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
 }
 .logo .blue{
     background: #2A6CEA;
@@ -80,6 +86,13 @@ a{
     position: relative;
     left: -13px;
 }
+.logo:hover .blue{
+    background: #397DFF;
+}
+.logo:hover .white{
+    background: #C2C8CD;
+}
+
 .menu{
     position: absolute;
     right: 0px;
@@ -126,8 +139,8 @@ header p{
 header a.btn{
     margin: 0px auto;
     margin-top: 92px;
-    background: white;
-    color: black;
+    background: #ECEFF2;
+    color: #191C1F;
     width: 180px;
     font-size: 20px;
     font-weight: 600;
@@ -135,10 +148,17 @@ header a.btn{
     letter-spacing: 0em;
     text-align: center;
     padding: 20px 40px;
-    background: #ECEFF2;
     border-radius: 4px;
+    transform: scale(1.0);
+    box-shadow: 0px 2px 20px transparent;
     display: block;
-    opacity: 1;
+    transition: .4s ease;
+}
+header a.btn:hover{
+    background: rgb(255, 196, 87);
+    box-shadow: 0px 2px 15px rgb(235, 185, 92);
+    transform: scale(1.02);
+    color: white;
 }
 
 section.how_work{
@@ -178,6 +198,7 @@ section.how_work{
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
+    margin: 4px 0px;
 }
 .content{
     margin: 80px auto;
@@ -212,12 +233,137 @@ section.feedbacks{
 }
 section.feedbacks h1{
     padding-top: 57px;
-    color: black;
+    color: #191C1F;
     font-size: 40px;
     font-weight: 600;
     line-height: 56px;
     letter-spacing: 0em;
     text-align: center;
-    
+}
+.slider{
+    position: relative;
+    margin-top: 32px;
+}
+.slider-item{
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding:22px;
+    margin: 0px 32px;
+    height: 316px;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+.slider-item .title{
+    display: flex;
+}
+.slider-item .about_man{
+    width: 237px;
+    margin-left: 16px;
+}
+.slider-item .about_man h6{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+.slider-item span{
+    font-family: GraphikLCG_light, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: #5E646A;
+}
+.slider-item p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    font-family: GraphikLCG_light, sans-serif;
+    width: 297px;
+
+}
+.slider img{
+    width: 44px;
+    height: 44px;
+}
+.slick-list{
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+.slider .slick-arrow{
+    position: absolute;
+    top: 40%;
+    z-index: 5;
+    border: 0px;
+    font-size: 0;
+    height: 32px;
+    width: 16px;
+    background: url(../img/Vector.png) center / cover no-repeat;
+    filter: saturate(0%);
+    transform: scale(1);
+    cursor: pointer;
+}
+.slider .slick-arrow:hover{
+    filter: saturate(100%);
+    transform: scale(1.1);
+}
+.slider .slick-prev{
+    left: -40px;
+    transform: scaleX(-1);
+}
+.slider .slick-prev:hover{
+    transform: scaleX(-1.1);
+}
+.slider .slick-next{
+    right: -40px;
+}
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 25px;
+    padding-bottom: 45px;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0px 15px;
+}
+.slider .slick-dots button{
+    font-size: 0;
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    background: #2A6CEA;
+    filter: saturate(0%);
+    border: 0px;
+    border-radius: 30px;
+}
+.slider .slick-dots button:hover{
+    filter: saturate(100%);
+}
+footer{
+    margin-top: 80px;
+}
+footer hr{
+    background: #ECEFF2;
+    border: 0px;
+    height: 1px;
+    width: 100%;
+}
+footer .container{
+    color: #191C1F;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 28px auto;
 
 }
