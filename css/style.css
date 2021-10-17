@@ -1,0 +1,223 @@
+@font-face {
+    font-family: GraphikLCG_light;
+    src: url(../fonts/GraphikLCG-Light.ttf);
+}
+@font-face {
+    font-family: GraphikLCG_med;
+    src: url(../fonts/GraphikLCG-Medium.ttf);
+}
+@font-face {
+    font-family: GraphikLCG_bold;
+    src: url(../fonts/GraphikLCG-Semibold.ttf);
+}
+
+*{
+    transition: all .3s ease;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: GraphikLCG_med, sans-serif;
+}
+.container{
+    width: 1216px;
+    margin: 0 auto;
+    position: relative;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    width: 100%;
+    background: url(../img/Skyscraper.png) no-repeat center center / cover;
+    height: 960px;
+    color: white;
+    margin-top: -20px;
+    z-index: -1;
+}
+.blue_bg{
+    background: #2A6CEA;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+nav{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    padding-top: 28px;
+    width: 120px;
+    display: flex;
+    left: 0px;
+    position: relative;
+}
+.logo .cur{
+    border-radius: 30px;
+    height: 24px;
+    width: 24px;
+}
+.logo .blue{
+    background: #2A6CEA;
+    z-index: 2;
+    position: relative;
+}
+.logo .white{
+    background: #ECEFF2;
+    z-index: 1;
+    position: relative;
+    left: -13px;
+}
+.menu{
+    position: absolute;
+    right: 0px;
+    display: flex;
+    width: 464px;
+    font-family: GraphikLCG_light, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin: 0;
+    padding-top: 28px;
+    padding-left: 0px;
+    justify-content: space-between;
+}
+.menu li{
+    display: block;
+}
+.menu li a{
+    border-bottom: 1px solid transparent;
+}
+.menu li:hover a{
+    border-bottom: 1px solid white;
+}
+header h1{
+    margin: 0px auto;
+    margin-top: 313px;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 748px;
+}
+header p{
+    margin: 0px auto;
+    margin-top: 18px;
+    font-family: GraphikLCG_light, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+header a.btn{
+    margin: 0px auto;
+    margin-top: 92px;
+    background: white;
+    color: black;
+    width: 180px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 20px 40px;
+    background: #ECEFF2;
+    border-radius: 4px;
+    display: block;
+    opacity: 1;
+}
+
+section.how_work{
+    margin-top: 80px;
+    color: #191C1F;
+}
+.how_work h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.how_work .groups{
+    margin-top: 61px;
+    display: flex;
+    justify-content: space-around;
+}
+.item{
+    width: 280px;
+    text-align: left;
+}
+.item img{
+    width: 72px;
+    height: 72px;
+}
+.item h6{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+.item p{
+    font-size: 14px;
+    font-family: GraphikLCG_light, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+.content{
+    margin: 80px auto;
+    display: flex;
+    width: max-content;
+}
+.content .text{
+    margin-top: 125px;
+    margin-right: 32px;
+    width: 592px;
+}
+.content h2{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+}
+.content p{
+    font-family: GraphikLCG_light, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin-top: 18px;
+}
+.content img{
+    height: 448px;
+    width: 592px;
+}
+section.feedbacks{
+    background: #F6F8FA;
+}
+section.feedbacks h1{
+    padding-top: 57px;
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+
+}
